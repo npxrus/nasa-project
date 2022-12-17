@@ -6,8 +6,8 @@ const { loadPlanetsData } = require('../../models/planets.model');
 
 describe('Test launches API', () => {
   beforeAll(async () => {
-    await loadPlanetsData();
     await mongoConnect();
+    await loadPlanetsData();
   });
 
   afterAll(async () => {
